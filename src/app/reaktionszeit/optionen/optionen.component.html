@@ -1,0 +1,22 @@
+<h1>Optionen</h1>
+<div class="bui-w-[35%]">
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Zeitabstände: [ms]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="minDelay">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>min. Verzögerung (+ {{ optionen!.value.minDelay }}): [ms]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="randDelay">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>Ampeln #Reihen</bui-label>
+            <input type="number" buiFormFieldControl formControlName="reihen">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>Ampeln # Spalten</bui-label>
+            <input type="number" buiFormFieldControl formControlName="spalten">
+        </bui-form-field>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>

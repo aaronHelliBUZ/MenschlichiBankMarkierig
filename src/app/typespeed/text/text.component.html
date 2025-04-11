@@ -1,0 +1,6 @@
+<div style="padding: 20px">
+    <h1 *ngIf="fertig">Stopp</h1>
+    <div id="cardContainer">
+        <span *ngFor="let buchstabe of randomCodeTextArray; let i = index" [class]="klassenArray[i]">{{ buchstabe }}</span>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="bui-w-[35%]" style="padding: 20px">
+    <h1>Optionen</h1>
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Zeit: [s]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="zeit">
+        </bui-form-field>
+        <bui-radio-group>
+            <bui-radio-button value="typeScript" formControlName="modus" ngDefaultControl>
+              TypeScript
+            </bui-radio-button>
+            <bui-radio-button value="normal" formControlName="modus" ngDefaultControl>
+              Normal
+            </bui-radio-button>
+          </bui-radio-group>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>

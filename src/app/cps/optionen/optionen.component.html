@@ -1,0 +1,14 @@
+<h1>Optionen</h1>
+<div class="bui-w-[14%]">
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Länge: [s]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="laenge">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>Pause: [s]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="pause">
+        </bui-form-field>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>

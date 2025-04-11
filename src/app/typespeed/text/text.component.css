@@ -1,0 +1,19 @@
+#cardContainer{
+    width: 50%;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.r{
+    color: rgb(27, 219, 27);
+}
+
+.f{
+    color: red;
+}
+
+h1{
+    font-size: 30px
+}

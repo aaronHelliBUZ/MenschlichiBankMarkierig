@@ -1,0 +1,14 @@
+<button bui-secondary-button (click)="reagieren()">{{ feld }}</button>
+<div class="bui-grid bui-grid-cols-1 bui-gap-1">
+    <bui-chat-message [inverted]="true" name="Nette Bot" *ngIf="laenge > 0">
+        <p>
+            Durchschnitt: {{ durchschnitt }}
+            <br>
+            Anzahl versuche: {{ laenge }}
+            <br>
+            Max: {{ max }}
+            <br>
+            Min: {{ min }}
+        </p>
+    </bui-chat-message>
+</div>

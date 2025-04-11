@@ -1,0 +1,21 @@
+<div class="bui-grid bui-grid-cols-1 bui-gap-1"  style="padding: 20px;">
+    <div class="bui-w-[50%]">
+        <form [formGroup]="input!">
+            <bui-form-field>
+                <bui-label></bui-label>
+                <textarea buiFormFieldControl formControlName="text" (keyup)="pruefen()"></textarea>
+            </bui-form-field>
+        </form>
+    </div>
+    <bui-chat-message [inverted]="true" name="Nette Bot">
+        <p>
+            Anschläge: {{ anschlaege }}
+            <br>
+            Anschläge/10 Minuten: {{ anschlaegeZehnMinuten }}
+            <br>
+            Fehler: {{ fehler }}
+            <br>
+            Genauigkeit: {{ (genauigkeit * 100).toFixed(2) }}%
+        </p>
+    </bui-chat-message>
+</div>
