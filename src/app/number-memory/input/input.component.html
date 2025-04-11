@@ -1,0 +1,18 @@
+<div class="bui-grid bui-grid-cols-1 bui-gap-1"  style="padding: 20px;">
+    <div class="bui-w-[25%]">
+        <form [formGroup]="input!" (submit)="submit()">
+            <bui-form-field>
+                <bui-label></bui-label>
+                <input type="number" buiFormFieldControl formControlName="zahl">
+            </bui-form-field>
+            <button bui-primary-button type="submit">Bestätigen</button>
+        </form>
+        <bui-chat-message [inverted]="true" name="Nette Bot">
+            <p>
+                Stellen: {{ durchlauf }}
+                <br>
+                Rekord: {{ rekord }}
+            </p>
+        </bui-chat-message>
+    </div>
+</div>

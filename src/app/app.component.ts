@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { KlickenService } from './cps/klicken.service';
 import { ReaktionService } from './reaktionszeit/reaktion.service';
 import { TestService } from './typespeed/test.service';
+import { NummerService } from './number-memory/nummer.service';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ import { TestService } from './typespeed/test.service';
   imports: [CommonModule, UiCoreModule, HeaderComponent, RouterOutlet]
 })
 export class AppComponent {
-  constructor(private klicken: KlickenService, private reaktion: ReaktionService, private test: TestService){
+  constructor(private klicken: KlickenService, private reaktion: ReaktionService, private test: TestService, private nummer: NummerService){
   }
 
   ngOnDestroy(){
@@ -32,5 +33,9 @@ export class AppComponent {
     this.test.index.unsubscribe();
     this.test.fertig.unsubscribe();
     this.test.zeit.unsubscribe();
+    this.nummer.disabled.unsubscribe();
+    this.nummer.neu.unsubscribe();
+    this.nummer.weiter.unsubscribe();
+    this.nummer.durchlauf.unsubscribe();
   }
 }

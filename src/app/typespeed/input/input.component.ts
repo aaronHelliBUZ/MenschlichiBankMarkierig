@@ -48,7 +48,9 @@ export class InputComponent {
     setTimeout(() => {
       const wrappers = document.getElementsByClassName('bui-label-wrapper bui-flex bui-flex-row-reverse');
       const wrapper = wrappers.item(0);
+      const wrapperZwei = wrappers.item(1);
       wrapper!.remove();
+      wrapperZwei!.remove();
     }, 0)
 
     this.input = new FormGroup({
