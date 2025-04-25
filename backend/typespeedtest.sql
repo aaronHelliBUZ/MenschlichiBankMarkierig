@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 11. Apr 2025 um 13:05
+-- Erstellungszeit: 25. Apr 2025 um 07:44
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -100,6 +100,73 @@ INSERT INTO `methods` (`id`, `code`) VALUES
 (61, 'flat([1, [2, 3], [4]])'),
 (62, 'flatMap([1, 2, 3], x => [x, x * 2])'),
 (63, 'isArray([1, 2, 3])');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `verbal_memory`
+--
+
+CREATE TABLE `verbal_memory` (
+  `id` int(11) NOT NULL,
+  `wort` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Daten für Tabelle `verbal_memory`
+--
+
+INSERT INTO `verbal_memory` (`id`, `wort`) VALUES
+(1, 'apple'),
+(2, 'house'),
+(3, 'chair'),
+(4, 'coast'),
+(5, 'moon'),
+(6, 'river'),
+(7, 'tiger'),
+(8, 'green'),
+(9, 'table'),
+(10, 'happy'),
+(11, 'lamp'),
+(12, 'phone'),
+(13, 'friend'),
+(14, 'music'),
+(15, 'smile'),
+(16, 'dream'),
+(17, 'water'),
+(18, 'road'),
+(19, 'pencil'),
+(20, 'mountain'),
+(21, 'flower'),
+(22, 'bottle'),
+(23, 'shadow'),
+(24, 'planet'),
+(25, 'window'),
+(26, 'guitar'),
+(27, 'sunset'),
+(28, 'forest'),
+(29, 'candle'),
+(30, 'school'),
+(31, 'cloud'),
+(32, 'light'),
+(33, 'street'),
+(34, 'orange'),
+(35, 'mirror'),
+(36, 'beach'),
+(37, 'story'),
+(38, 'animal'),
+(39, 'rocket'),
+(40, 'science'),
+(41, 'paper'),
+(42, 'umbrella'),
+(43, 'carpet'),
+(44, 'coffee'),
+(45, 'bridge'),
+(46, 'picture'),
+(47, 'island'),
+(48, 'travel'),
+(49, 'pillow'),
+(50, 'wallet');
 
 -- --------------------------------------------------------
 
@@ -234,6 +301,12 @@ INSERT INTO `words` (`id`, `word`) VALUES
 -- Indizes für die Tabelle `methods`
 --
 ALTER TABLE `methods`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `verbal_memory`
+--
+ALTER TABLE `verbal_memory`
   ADD PRIMARY KEY (`id`);
 
 --

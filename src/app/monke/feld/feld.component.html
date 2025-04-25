@@ -1,0 +1,15 @@
+<div style="padding: 20px">
+    <div class="bui-grid bui-grid-cols-4 bui-gap-2" style="width: 300px; height: 300px; margin-bottom: 20px;">
+        <button bui-primary-button *ngFor="let randomZahl of randomArray; let i = index" style="height: 63px !important; width: 63px !important;" (click)="klicken(i)">
+            <p *ngIf="zeigen && randomZahl != 0">{{ randomZahl }}</p>
+        </button>
+    </div>
+    <button bui-red-button *ngIf="schade" (click)="reset()">Schade - Neustart</button>
+    <bui-chat-message [inverted]="true" name="Nette Bot">
+        <p style="font-size: 15px">
+            Rekord (Zahl): {{ rekordZahl }}
+            <br>
+            Rekord (Runden): {{ rekordRunden }}
+        </p>
+    </bui-chat-message>
+</div>

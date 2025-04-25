@@ -13,6 +13,7 @@ export class FeldComponent {
   randomZahlString: string = '';
   durchlauf?: number;
   disabled: boolean = true;
+  zeit: number = 5;
 
   constructor(private nummer: NummerService){
   }
@@ -29,7 +30,7 @@ export class FeldComponent {
     setTimeout(() => {
       this.nummer.disabled.next(false)
       this.nummer.zahl = this.randomZahlString;
-    }, 5000)
+    }, this.zeit * 1000)
   }
 
   ngOnInit(){
@@ -49,6 +50,10 @@ export class FeldComponent {
 
     this.nummer.weiter.subscribe(
       data => this.randomZahl()
+    )
+
+    this.nummer.zeit.subscribe(
+      data => this.zeit = data
     )
   }
 }

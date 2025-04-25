@@ -1,0 +1,17 @@
+<div style="padding: 20px">
+    <div id="container">{{ vorgekommeneWoerter[vorgekommeneWoerter.length - 1] }}</div>
+    <div class="bui-flex bui-gap-1">
+        <button bui-red-button (click)="test(false)">Noch nicht vorgekommen</button>
+        <button bui-yellow-button (click)="test(true)">Schon vorgekommen</button>
+    </div>
+    <div style="width: 54%;">
+        <button bui-orange-button *ngIf="schade" (click)="reset()">Schade - Neustart</button>
+    </div>
+    <bui-chat-message [inverted]="true" name="Nette Bot">
+        <p style="font-size: 15px">
+            Aktuelles Wort: {{ runden }}
+            <br>
+            Rekord: {{ rekord }}
+        </p>
+    </bui-chat-message>
+</div>

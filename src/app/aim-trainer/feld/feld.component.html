@@ -1,0 +1,23 @@
+<div style="padding: 20px">
+    <div id="cardContainer">
+        <button bui-primary-button
+        [style]="`margin-left: ${randomX}%;
+        margin-top: ${randomY}%;
+        height: ${groesse}px !important;
+        width: ${groesse}px !important;
+        border-radius: ${groesse / 2}px !important;`"
+        (click)="randomPosition()" id="ziel"></button>
+    </div>
+    <bui-chat-message [inverted]="true" name="Nette Bot">
+        <p style="font-size: 15px">
+            Treffer: {{ treffer }}
+            <br>
+            Rekord: {{ rekord }}
+            <br>
+            Rekord / Minute: {{ rekord / (zeit / 60) }}
+            <br>
+            Rekord / Minute / (px / 10): {{ absolutRekord() }}
+        </p>
+    </bui-chat-message>
+    <button bui-primary-button (click)="neustart()">Neustart</button>
+</div>

@@ -1,0 +1,16 @@
+div div{
+    width: 25%;
+}
+
+#container{
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+}
+
+button{
+    margin: 10px;
+    width: 44% !important;
+}

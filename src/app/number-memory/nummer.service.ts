@@ -9,6 +9,7 @@ export class NummerService {
   neu = new Subject<boolean>();
   weiter = new Subject<boolean>();
   durchlauf = new Subject<number>();
+  zeit = new Subject<number>();
   zahl?: string;
 
   pruefen(zahl: string){

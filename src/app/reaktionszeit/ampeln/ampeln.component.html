@@ -1,4 +1,4 @@
 <button bui-primary-button (click)="start(1)">{{ knopf }}</button>
-<div [class]="`bui-grid bui-gap-1 bui-grid-cols-${spalten.toString()}`" id="gridContainer" [style]="`width: ${(spalten * 36.66666666666666667)}px`">
+<div [class]="`bui-grid bui-gap-1 bui-grid-cols-${spalten.toString()}`" id="gridContainer" [style]="`width: ${(spalten * 36.66666666666666667)}px; flex-wrap: none`">
     <div class="ampeln" *ngFor="let i of ampelnArray" [ngClass]="ampeln[i - 1]"></div>
 </div>

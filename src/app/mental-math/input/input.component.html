@@ -1,0 +1,24 @@
+<div class="bui-w-[25%]" style="padding: 20px; margin-bottom: 20px;">
+    <bui-meter [max]="startZeit" [min]="0" [value]="zeit" [low]="round(startZeit / 3)" [veryLow]="round(startZeit / 6)" [high]="startZeit - round(startZeit / 3)" [veryHigh]="startZeit - round(startZeit / 6)"></bui-meter>
+</div>
+<div>
+    <bui-badge>{{ rechnung }}</bui-badge>
+</div>
+<div class="bui-w-[21%]"  style="margin-left: 5px; margin-top: 20px;">
+    <form [formGroup]="input!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label></bui-label>
+            <input type="number" buiFormFieldControl formControlName="zahl">
+        </bui-form-field>
+    </form>
+    <button bui-primary-button (click)="reset()" *ngIf="abgelaufen">Reset</button>
+    <bui-chat-message [inverted]="true" name="Nette Bot">
+        <p>
+            Anzahl Rechnungen {{ rechnungenCounter }}
+            <br>
+            Rekord {{ rekord }}
+            <br>
+            Rekord / Minute {{ rekordZeit }}
+        </p>
+    </bui-chat-message>
+</div>

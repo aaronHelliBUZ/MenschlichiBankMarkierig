@@ -1,0 +1,13 @@
+<div style="width: 20%;">
+    <div class="bui-grid bui-grid-cols-5 bui-gap-1">
+        <button bui-primary-button (click)="klicken(i)" *ngFor="let zahl of randomArray[feld]; let i = index" style="width: 47.8px; height: 47.8px">{{ zahl }}</button>
+    </div>
+    <button bui-red-button *ngIf="schade" (click)="reset()" style="margin-top: 20px; margin-bottom: 20px;">Neustart</button>
+    <bui-chat-message [inverted]="true" name="Nette Bot" *ngIf="zeigen">
+        <p>
+            Rekord (Zeit): {{ rekordZeit }} s
+            <br>
+            Rekord (Zeit) / Felder: {{ rekordZeitFeld }} s
+        </p>
+    </bui-chat-message>
+</div>

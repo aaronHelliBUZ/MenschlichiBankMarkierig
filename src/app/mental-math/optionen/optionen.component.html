@@ -1,0 +1,80 @@
+<div class="bui-w-[28%]" style="padding: 20px">
+    <h1>Optionen</h1>
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Zeit</bui-label>
+            <input type="number" buiFormFieldControl formControlName="zeit">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Addition Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="plusMax1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Addition Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="plusMin1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Addition Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="plusMax2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Addition Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="plusMin2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Subtraktion Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="minusMax1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Subtraktion Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="minusMin1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Subtraktion Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="minusMax2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Subtraktion Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="minusMin2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Multiplikation Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="malMax1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Multiplikation Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="malMin1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Multiplikation Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="malMax2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Multiplikation Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="malMin2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Division Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="geteiltMax1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>1. Zahl Division Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="geteiltMin1">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Division Range</bui-label>
+            <input type="number" buiFormFieldControl formControlName="geteiltMax2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>2. Zahl Division Min</bui-label>
+            <input type="number" buiFormFieldControl formControlName="geteiltMin2">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-checkbox buiFormFieldControl formControlName="plus">+</bui-checkbox>
+            <bui-checkbox buiFormFieldControl formControlName="minus">-</bui-checkbox>
+            <bui-checkbox buiFormFieldControl formControlName="mal">*</bui-checkbox>
+            <bui-checkbox buiFormFieldControl formControlName="geteilt">/</bui-checkbox>
+        </bui-form-field>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="bui-w-[23%]" style="padding: 20px">
+    <h1>Optionen</h1>
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Startnummer</bui-label>
+            <input type="number" buiFormFieldControl formControlName="startNummer">
+        </bui-form-field>
+        <bui-form-field>
+            <bui-label>Runden Pro Nummer</bui-label>
+            <input type="number" buiFormFieldControl formControlName="runden">
+        </bui-form-field>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>

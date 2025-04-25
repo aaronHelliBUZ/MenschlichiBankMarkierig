@@ -1,0 +1,10 @@
+<div class="bui-w-[13%]" style="padding: 20px">
+    <h1>Optionen</h1>
+    <form [formGroup]="optionen!" (submit)="submit()">
+        <bui-form-field>
+            <bui-label>Merkzeit: [s]</bui-label>
+            <input type="number" buiFormFieldControl formControlName="zeit">
+        </bui-form-field>
+        <button bui-primary-button type="submit">Bestätigen</button>
+    </form>
+</div>
